@@ -14,12 +14,13 @@ export class Add extends SmartContract {
 
   init() {
     super.init();
-    this.num.set(Field(1));
+    this.num.set(Field(3));
   }
 
-  @method update() {
-    const currentState = this.num.getAndAssertEquals();
-    const newState = currentState.add(2);
-    this.num.set(newState);
+  @method update(square: Field) {
+    const currentState = this.num.get();
+    this.num.assertEquals(currentState);
+    square.assertEquals(currentState.mul(currentState));
+    this.num.set(square);
   }
 }

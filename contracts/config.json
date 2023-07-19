@@ -1,4 +1,13 @@
 {
   "version": 1,
-  "deployAliases": {}
+  "deployAliases": {
+    "zkui": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/zkui.json",
+      "feepayerKeyPath": "/Users/joshuanwankwo/.cache/zkapp-cli/keys/zkui.json",
+      "feepayerAlias": "zkui",
+      "fee": "0.3",
+      "smartContract": "Add"
+    }
+  }
 }
